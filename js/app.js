@@ -61,7 +61,7 @@ Player.prototype.update = function(){
     // check when the player reaches water at the top.
       if(this.y < 10){
          document.getElementById("display").innerHTML = "You made it to the sea";
-          player.reset();
+          this.reset();
       }
 };
 
@@ -92,6 +92,7 @@ Player.prototype.reset = function(){
     this.x = 200;
     this.y = 410;
     this.speed = 40;
+    
 
 };
 
