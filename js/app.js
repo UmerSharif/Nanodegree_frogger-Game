@@ -18,11 +18,11 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     this.x += this.speed * dt;
-
+// if enemy hit the right wall reset the enemy to its initial position
     if(this.x > 500){
         this.reset();
     }
-
+// detecting collision when enemy collides with the player
     detectCollision(this);
 };
 
@@ -30,7 +30,7 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
+// reset function for enemy.
 Enemy.prototype.reset = function(){
            this.x = 0;
            this.y = Math.random() * 190 + 50;
@@ -38,9 +38,10 @@ Enemy.prototype.reset = function(){
 };
 
 var detectCollision = function(EnemyObj){
+    // if condition to check collision when the emeny and player are 50 pixels apart.
     if(player.x + 50 >= EnemyObj.x && player.x <= EnemyObj.x + 50  && player.y + 50 >= EnemyObj.y && player.y <= EnemyObj.y + 50 ){
         player.reset();
-         document.getElementById("display").innerHTML = "You are Eaten Alive";
+        document.getElementById("display").innerHTML = "You are Eaten Alive";
     }
 };
 
@@ -57,6 +58,7 @@ var Player = function(x, y, velocity){
 
 //update method for player
 Player.prototype.update = function(){
+    // check when the player reaches water at the top.
       if(this.y < 10){
          document.getElementById("display").innerHTML = "You made it to the sea";
           player.reset();
@@ -66,7 +68,7 @@ Player.prototype.update = function(){
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
+// input function for moving the player.
 Player.prototype.handleInput = function(keydown){
     if(keydown === 'left' && this.x > 3 ){
         this.x -= this.speed;
@@ -85,7 +87,7 @@ Player.prototype.handleInput = function(keydown){
 
 
 };
-
+// reset function for player.
 Player.prototype.reset = function(){
     this.x = 200;
     this.y = 410;
