@@ -61,7 +61,7 @@ Player.prototype.update = function(){
     // check when the player reaches water at the top.
       if(this.y < 10){
          document.getElementById("display").innerHTML = "You made it to the sea";
-          this.reset();
+         this.reset();
       }
 };
 
@@ -92,7 +92,7 @@ Player.prototype.reset = function(){
     this.x = 200;
     this.y = 410;
     this.speed = 40;
-    
+
 
 };
 
@@ -106,6 +106,7 @@ var enemy1 = new Enemy(0, Math.random() * 190 + 50, Math.random() * 256);
 var enemy2 = new Enemy(0, Math.random() * 190 + 40, Math.random() * 256);
 var enemy3 = new Enemy(0, Math.random() * 190 + 30, Math.random() * 256);
 allEnemies.push(enemy1,enemy2,enemy3);
+
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
