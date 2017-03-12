@@ -33,7 +33,7 @@ Enemy.prototype.render = function() {
 
 Enemy.prototype.reset = function(){
            this.x = 0;
-           this.y = Math.random() * 184 + 50;
+           this.y = Math.random() * 190 + 50;
            this.speed = Math.random() * 256;
 };
 
@@ -96,10 +96,10 @@ Player.prototype.reset = function(){
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 var allEnemies = [];
-var player = new Player(202.5, 383, 40);
-var enemy1 = new Enemy(0, Math.random() * 184 + 50, Math.random() * 256);
-var enemy2 = new Enemy(0, Math.random() * 184 + 40, Math.random() * 256);
-var enemy3 = new Enemy(0, Math.random() * 184 + 30, Math.random() * 256);
+var player = new Player(200, 390, 40);
+var enemy1 = new Enemy(0, Math.random() * 190 + 50, Math.random() * 256);
+var enemy2 = new Enemy(0, Math.random() * 190 + 40, Math.random() * 256);
+var enemy3 = new Enemy(0, Math.random() * 190 + 30, Math.random() * 256);
 allEnemies.push(enemy1,enemy2,enemy3);
 
 // This listens for key presses and sends the keys to your
