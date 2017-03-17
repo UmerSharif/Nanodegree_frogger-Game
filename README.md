@@ -14,7 +14,7 @@ Use keyboard up/right/left/down arrow keys to move the player around.
 ## Installation:
 
              1. First of all download the game from the following link:
-                * GitHub Repository: (https://github.com/UmerSharif/Nanodegree_frogger-Game)
+                * GitHub Repository:[download me](https://github.com/UmerSharif/Nanodegree_frogger-Game)
              2. Unzip the files and Run index.html file in any browser.
 
 
