@@ -4,6 +4,8 @@ frontend-nanodegree-arcade-game
 ## Summary :
 Frogger Arcade is a variation of the classic Frogger arcade game. This is a customized edition.
 
+## [See the Live Project Here](https://nano-frogger-game.netlify.com/)
+
 # Plot of the Game:
 
 The game is simple. You have to move the player character such that it cross the areas where the bugs are moving, and reach at the top. if any enemy bug touches you, you will be brought back to the initial position.
